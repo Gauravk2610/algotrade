@@ -1,9 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800&display=swap'); */
+
+@layer components {
+  .container {
+    @apply max-w-[1320px] mx-auto py-8 px-4 lg:px-0
+  }
+  .menu__icons {
+    @apply px-3 cursor-pointer relative flex items-center hover:text-blue-600 h-full
+  }
+  .link {
+    @apply after:absolute after:bg-blue-600 after:bottom-0 after:w-full after:h-1 after:top-full after:left-0 after:transition-transform after:scale-x-0 hover:after:scale-100 after:origin-right hover:after:origin-left after:duration-500 after:ease-in-out
+  }
+  .strategies__container {
+    @apply w-[260px] bg-white flex-shrink-0 rounded-lg h-40 cursor-pointer hover:shadow-lg transition-shadow duration-200 ease-in-out px-4 py-2
+  }
+}
+
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    background-color: rgb(250, 250, 250);
+    font-family: 'Kanit', sans-serif;
 }
 
 a {
@@ -13,14 +37,26 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: rgb(255, 255, 255);
   }
-}
+} */
